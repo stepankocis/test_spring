@@ -43,12 +43,13 @@ public class ContinentStatsController {
         int totalLifeExp = 0;
         int totalGdpPC = 0;
         String lowestLifeExpectancy = new String();
-        double lowestLE = 0;
+        double lowestLE = 999;
         double highestLE = 0;
         String highestLifeExpectancy = new String();
         for(int i = 0; i < list.size(); i++) {
             String continent2 = list.get(i).getContinent();
-            if(continent2 == continent) {
+            //if(continent2 == (continent)) {
+            if(continent2.equals(continent)) {
                 countryCount++;
                 totalPopulation += list.get(i).getPopulation();
                 totalLifeExp += list.get(i).getLifeExp();
